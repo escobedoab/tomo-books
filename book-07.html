@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tomo's Totally Reliable Guide — Day 7</title>
+
+<script>
+/* ==========================================================================
+   ★★★  THE ONLY PART YOU EVER EDIT  ★★★
+
+   Every page of the book is one { } block in the "pages" list below.
+   Change the words. Change the picture file. That's it.
+
+   WHEN YOU GET HOME FROM JAPAN:
+     1. Put your real photo in the images/ folder
+     2. Change that page's  img:  line to your photo's file name
+     3. Optional: fill in  caption:  or  real:  — blank ones stay hidden
+         caption = a line under the picture
+         real    = a yellow sticky note: "What REALLY happened..."
+   ========================================================================= */
+
+const BOOK = {
+  day   : 7,
+  date  : "Friday, October 9",
+  place : "Kyoto, Japan",
+  title : "Ten Thousand Gates and a Thousand Foxes",
+  from  : "— Love, Mom & Dad",
+
+  /* EVERY place we go today, in order. The map page draws these.
+     Rule: every stop on the itinerary gets a spot here AND its own stop card. */
+  start : "🐒 Yesterday: a monkey stole my snack. I am still not over it.",
+  stops : [
+    { name:"The Silver Pavilion",  emoji:"🏯", when:"morning" },
+    { name:"Fushimi Inari Shrine", emoji:"⛩️", when:"late morning" },
+    { name:"Fushimi Brewery",      emoji:"🍶", when:"afternoon" },
+    { name:"Kyoto Ramen Dinner",   emoji:"🍜", when:"night" }
+  ],
+  finish: "🛏️ Back to our Kyoto house. My legs are noodles.",
+
+  pages : [
+
+    /* ---------- COVER ---------- */
+    { type:"cover",
+      img:"images/day-07-cover.jpg", scene:"⛩️🦊🦝⛩️", art:"Tomo peeking out of a tunnel of orange gates, a stone fox watching him" },
+
+    /* ---------- TODAY'S MAP ---------- */
+    { type:"map",
+      text:`Today was our <b>last whole day in Kyoto</b>. We went to <b>4 places</b>, and one of them was a whole mountain covered in orange gates. Follow my footprints! 🐾`,
+      img:"images/day-07-map.jpg", scene:"🗺️🐾🐾🐾", art:"A hand-drawn map of Kyoto with 4 numbered stops and little raccoon footprints between them" },
+
+    /* ========== STOP 1: THE SILVER PAVILION ========== */
+    { type:"stop", stop:1,
+      jp:"銀閣寺", say:"GEEN-kah-koo-jee", mean:"Silver Pavilion Temple",
+      what:`A quiet old <b>temple</b> with a wooden building, a moss garden, and a giant pile of sand shaped like a <b>pudding</b>.`,
+      wow :"The Silver Pavilion is NOT silver. 🤨",
+      bigkid:`It was built over <b>500 years ago</b> for a <b>shogun</b> (SHOW-gun), a powerful army leader who ruled Japan. The story goes that he planned to cover it in silver, but it never happened. The name stuck anyway. It's a <b>Zen Buddhist</b> temple now. Zen is all about paying attention to <i>one thing at a time</i>.`,
+      ask :"If you could name a building something it ISN'T, what would you call it?",
+      img :"images/day-07-stop1.jpg", scene:"🏯🌿⚪", art:"A dark wooden two-story temple behind a garden of raked white sand and soft green moss",
+      caption:"", real:"" },
+
+    { type:"story", stop:1,
+      text:`I brought a magnifying glass. I checked every wall. I checked every window. I checked under a <b>rock</b>.`,
+      pop :"Silver found: zero. I want to talk to the manager. 🔍",
+      img :"images/day-07-p01.jpg", scene:"🦝🔍🏯", art:"Tomo squinting through a magnifying glass at a plain wooden wall",
+      caption:"", real:"" },
+
+    { type:"story", stop:1,
+      big :"There is a sand castle here that is OLDER than your country.",
+      text:`It's a big flat-topped cone of white sand, taller than Dad. People say it's for looking at the <b>moon</b>. Every day, gardeners <b>rake</b> the sand around it into perfect lines, like waves on the ocean.`,
+      pop :"I asked if I could slide down it. The answer was a very polite NO. 🙅",
+      img :"images/day-07-p02.jpg", scene:"🦝🏔️🌕", art:"Tomo staring up at a giant cone of white sand, wide-eyed, with raked wavy lines all around",
+      caption:"", real:"" },
+
+    /* ========== STOP 2: FUSHIMI INARI SHRINE ========== */
+    { type:"stop", stop:2,
+      jp:"伏見稲荷", say:"foo-SHEE-mee ee-NAH-ree", mean:"Inari, the spirit of rice",
+      what:`A whole <b>mountain</b> covered in bright orange gates. They line the path like a tunnel all the way up.`,
+      wow :"About 10,000 gates! ⛩️ × 10,000",
+      bigkid:`A <b>temple</b> (like this morning's) is <b>Buddhist</b>. A <b>shrine</b> (like this one) is <b>Shinto</b>, Japan's oldest religion. Easy trick: if it has a <b>torii gate</b>, it's a shrine. This shrine is over <b>1,300 years old</b>. Walking to the very top and back takes 2 to 3 hours.`,
+      ask :"How many gates do you think YOU could count before you lost track?",
+      img :"images/day-07-stop2.jpg", scene:"⛩️⛩️⛩️⛰️", art:"A tunnel of bright orange gates winding up a green mountain",
+      caption:"", real:"" },
+
+    { type:"story", stop:2,
+      text:`I said I would count every gate. I started strong. <b>1… 2… 3…</b> By gate 400, my brain felt like spaghetti.`,
+      pop :"Official count: 400 and then a lot. 🍝",
+      img :"images/day-07-p03.jpg", scene:"🦝📓⛩️⛩️", art:"Tomo scribbling tally marks in his notebook, pages and pages of them, gates stretching behind him",
+      caption:"", real:"" },
+
+    { type:"story", stop:2,
+      text:`Here's a secret. Every single gate was a <b>present</b>. A person or a business paid for it to say <b>"thank you"</b>, and their name is painted on the back. Some cost as much as a car!`,
+      pop :"So we walked through ten thousand thank-yous. That's a LOT of manners. 🙏",
+      img :"images/day-07-p04.jpg", scene:"⛩️🙏✨", art:"Tomo looking thoughtfully at black writing painted on the back of an orange gate",
+      caption:"", real:"" },
+
+    { type:"story", stop:2,
+      text:`There were <b>foxes</b> everywhere. Stone foxes. Big ones, small ones, foxes wearing red bibs. Lots of them hold a <b>key</b> in their mouth. That's the key to the rice storehouse. Foxes are the spirit's helpers.`,
+      pop :"I pretended to be a fox so I'd fit in. Nobody bought it. 🦊",
+      img :"images/day-07-p05.jpg", scene:"🦊🔑🦝", art:"A stone fox with a key in its mouth, and Tomo next to it, posing the exact same way",
+      caption:"", real:"" },
+
+    { type:"story", stop:2,
+      big :"Foxes have a favorite snack. And so do I now.",
+      text:`Foxes are said to love <b>fried tofu</b>. So there's a snack named after this shrine: <b>inari sushi</b>. It's sweet rice tucked inside a little golden tofu pocket.`,
+      pop :"Yesterday I wished for a snack. TODAY IT CAME TRUE. Thank you, foxes. 🍣😭",
+      img :"images/day-07-p06.jpg", scene:"🍣🦝💛", art:"Tomo hugging a golden inari sushi pocket like a teddy bear, eyes shining",
+      caption:"", real:"" },
+
+    { type:"why", stop:2,
+      title:"Why Tie Up Bad Luck?",
+      text:`At the shrine, you can pick a paper fortune called an <b>omikuji</b> (oh-MEE-koo-jee). It might say <i>"Great luck!"</i>, or it might say <i>"Bad luck."</i> If you get bad luck, you <b>don't</b> take it home. You fold it up and tie it to a rack at the shrine.`,
+      pop:"The racks are covered in thousands of little white knots. 🎀",
+      text2:`It means: <i>"I'm leaving this here."</i> Every knot is somebody deciding not to carry a worry around anymore.`,
+      img:"images/day-07-why.jpg", scene:"📜🎀🎀🎀", art:"A wooden rack covered in hundreds of tiny white paper fortunes tied in knots" },
+
+    /* ========== STOP 3: FUSHIMI BREWERY ========== */
+    { type:"stop", stop:3,
+      jp:"酒蔵", say:"sah-kah-GOO-rah", mean:"rice-drink storehouse",
+      what:`An old building where they make <b>sake</b> (SAH-keh), a grown-up drink made from <b>rice and water</b>. Kids get to look and sniff. Grown-ups get a tiny taste.`,
+      wow :"The secret ingredient is hidden UNDERGROUND. 💧",
+      bigkid:`Long ago, this neighborhood was called <b>Fushimizu</b> (foo-shee-MEE-zoo), which means <i>"hidden water."</i> Deep under the ground there's cold, clean spring water, and it's perfect for making sake. Some breweries let visitors drink the spring water for free. It's just water, but people say it's extra delicious.`,
+      ask :"What's the best-tasting water you've ever had? Where were you?",
+      img :"images/day-07-stop3.jpg", scene:"🏚️🛢️💧", art:"An old dark-wood brewery with white walls, giant wooden barrels, and a round green ball hanging over the door",
+      caption:"", real:"" },
+
+    { type:"story", stop:3,
+      text:`Over the door hangs a big round ball made of <b>cedar tree</b> branches. When it's <b>green</b>, it means <i>"New sake is here!"</i> As the months go by, it slowly turns <b>brown</b>. When it's brown, the sake is ready.`,
+      pop :"It's a calendar made out of a tree. I'm impressed. 🌲📅",
+      img :"images/day-07-p07.jpg", scene:"🟢➡️🟤🦝", art:"Tomo pointing up at a big round cedar ball hanging over a brewery door",
+      caption:"", real:"" },
+
+    /* ========== STOP 4: KYOTO RAMEN DINNER ========== */
+    { type:"stop", stop:4,
+      name:"Kyoto Engine Ramen",
+      jp:"ラーメン", say:"RAH-men", mean:"ramen noodles",
+      what:`A cozy little noodle shop for our last dinner in Kyoto. Big bowls. Lots of steam. <b>Very</b> loud slurping (remember, that's polite here!).`,
+      wow :"At lots of ramen shops, you order from a MACHINE. 🎫",
+      bigkid:`It's called a <b>ticket machine</b>. You put in money, push the button for the food you want, and it gives you a little ticket. You hand the ticket to the cook. No waiting for a menu, no shouting your order. The cook can just <b>cook</b>.`,
+      ask :"If you had a ticket machine at home, what would YOUR buttons be?",
+      img :"images/day-07-stop4.jpg", scene:"🍜🎫🔥", art:"A small ramen shop with a wooden counter, a steaming bowl, and a ticket machine full of buttons by the door",
+      caption:"", real:"" },
+
+    { type:"story", stop:4,
+      text:`The machine had about <b>40 buttons</b>. I wanted to try one. My paw slipped. Then it slipped again. And again.`,
+      pop :"Dad got 6 tickets and one very surprised face. 🎫🎫🎫🎫🎫🎫",
+      img :"images/day-07-p08.jpg", scene:"🦝🎫💥", art:"Tomo tumbling off a ticket machine while a long ribbon of tickets spills out",
+      caption:"", real:"" },
+
+    { type:"try",
+      text:`Write down <b>one worry</b> on a small piece of paper. Fold it into a skinny strip. Tie it in a knot around a fence, a branch, or a chair leg. Then walk away and <b>leave it there</b>. Just like the shrine.`,
+      img:"images/day-07-try.jpg", scene:"📝🎀🌳", art:"A folded paper strip tied around a backyard tree branch" },
+
+    /* ---------- TOMO'S LOG ---------- */
+    { type:"log",
+      rows:[
+        ["Places we went",          "4 (check the map!)"],
+        ["Silver found",            "0 (I'm still annoyed)"],
+        ["Gates walked through",    "I lost count at 400"],
+        ["Foxes that stared at me", "All of them"],
+        ["Snacks acquired",         "1 (FINALLY!)"],
+        ["Ramen tickets bought",    "6 (oops)"]
+      ],
+      img:"images/day-07-log.jpg", scene:"📓✏️🦝", art:"Tomo scribbling in his little red notebook, tail wrapped around him" },
+
+    /* ---------- JAPANESE WORDS ---------- */
+    { type:"words",
+      words:[
+        { jp:"とりい", kanji:"鳥居", say:"TOH-ree", mean:"shrine gate", joke:"Walk through one and you're somewhere special." },
+        { jp:"きつね", kanji:"狐", say:"kit-SOO-neh", mean:"fox", joke:"Holds a key. Won't share it. Rude." }
+      ],
+      img:"images/day-07-words.jpg", scene:"⛩️ 🦊", art:"An orange gate and a fox drawn like flashcards" },
+
+    /* ---------- TOMO'S TOTALLY TRUE FACT (it isn't) ---------- */
+    { type:"fact",
+      claim:`The gates are orange because orange is the LOUDEST color, and it scares bad luck away.`,
+      truth:`I was… kind of right?! The color is called <b>vermilion</b> (ver-MIL-yun), and people in Japan believe it keeps bad luck away. But there's a sneaky science reason too: long ago the paint was made from a red rock that also protected the wood from bugs and rot. Spooky <b>and</b> useful.`,
+      img:"images/day-07-fact.jpg", scene:"⛩️🔊😬", art:"Tomo yelling at an orange gate through cupped paws" },
+
+    /* ---------- SOUVENIR BAG ---------- */
+    { type:"gift",
+      today:"One paper fortune. 🔖",
+      note :"(I can't read it. I've decided it says I'm magnificent.)",
+      bag  :["🥨 an airplane pretzel","📜 a chopstick wrapper","🏎️ a go-kart sticker","🍁 one perfect leaf","🎀 a lunchbox ribbon","🎋 a piece of bamboo","🔖 a paper fortune"],
+      img:"images/day-07-gift.jpg", scene:"🎒✨", art:"Tomo's yellow bag open, all the souvenirs spilling out" },
+
+    /* ---------- FIND TOMO ---------- */
+    { type:"find",
+      text:"Can you find me? I'm hiding in the orange gates, pretending to be a fox. (My fluffy tail gives me away.)",
+      img:"images/day-07-find.jpg", scene:"⛩️⛩️⛩️⛩️⛩️", art:"A long tunnel of orange gates, with a little fluffy unstriped tail poking out behind one post" },
+
+    /* ---------- LOVE NOTE ---------- */
+    { type:"love",
+      text:`Today we walked through <b>ten thousand gates</b>, and every single one was somebody's way of saying <b>"thank you."</b><br><br>So here's ours: thank you for being YOU. We are so lucky to be your mom and dad. Only 3 more books until we're home!`,
+      img:"images/day-07-love.jpg", scene:"💌❤️⛩️", art:"A hand-drawn postcard of the orange gates with a heart on it" },
+
+    /* ---------- TOMORROW ---------- */
+    { type:"next",
+      text:`Tomorrow: goodbye Kyoto! A little mountain train that zigzags up a hill, a giant gate standing <b>in a lake</b>, and a boat ride (I heard there are <b>pirate ships</b> 🏴‍☠️).`,
+      pop:"I packed my own suitcase this time. It's Mom's suitcase.",
+      img:"images/day-07-next.jpg", scene:"🚃⛩️🌊🏴‍☠️", art:"A red gate standing in the water of a misty lake" }
+  ]
+};
+</script>
+<script src="lock.js"></script>
+
+<style>
+/* =========================================================================
+   MACHINERY — nothing below here needs editing
+   ====================================================================== */
+:root{
+  --paper:#fffaf0; --ink:#2f2a26; --ink2:#6a5f54;
+  --red:#e0452f; --redd:#b32d1c; --blue:#2f7fb5; --green:#4f9447;
+  --gold:#f2b134; --purple:#7b5aa8;
+  --disp:"Segoe Print","Bradley Hand","Comic Sans MS","Chalkboard SE",cursive;
+  --body:"Trebuchet MS",Verdana,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0; font-family:var(--body); color:var(--ink);
+  background:
+    radial-gradient(circle at 12% 18%, rgba(255,255,255,.55) 0 2px, transparent 3px),
+    radial-gradient(circle at 62% 72%, rgba(255,255,255,.5) 0 2px, transparent 3px),
+    #f3c95f;
+  background-size:44px 44px,66px 66px,auto;
+  display:flex; flex-direction:column; align-items:center;
+  padding:18px 12px 110px;
+  -webkit-text-size-adjust:100%;
+  user-select:none;
+}
+
+/* ---------- the book ---------- */
+.book{ width:100%; max-width:820px; position:relative; perspective:1800px }
+.leaf{
+  display:none;
+  background:var(--paper);
+  border:5px solid var(--ink);
+  border-radius:24px;
+  box-shadow:12px 14px 0 rgba(0,0,0,.22);
+  overflow:hidden;
+  min-height:600px;
+}
+.leaf.on{ display:flex; flex-direction:column; animation:flipIn .45s ease-out }
+.leaf.on.back{ animation:flipBack .45s ease-out }
+@keyframes flipIn  { from{ transform:rotateY(-14deg) translateX(40px); opacity:0 } to{ transform:none; opacity:1 } }
+@keyframes flipBack{ from{ transform:rotateY(14deg) translateX(-40px); opacity:0 } to{ transform:none; opacity:1 } }
+
+/* ---------- picture area ---------- */
+.pic{ position:relative; aspect-ratio:4/3; max-height:44vh; width:100%; border-bottom:5px solid var(--ink); overflow:hidden }
+.pic img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover }
+.scene{
+  position:absolute; inset:0; display:flex; flex-direction:column;
+  align-items:center; justify-content:center; gap:14px; text-align:center; padding:20px;
+}
+.scene .emo{ font-size:clamp(3.2rem,11vw,6.4rem); letter-spacing:.08em; line-height:1.1;
+             filter:drop-shadow(3px 4px 0 rgba(0,0,0,.15)) }
+.scene .art{ font-family:var(--disp); font-size:.95rem; color:rgba(47,42,38,.6);
+             background:rgba(255,255,255,.6); border:2px dashed rgba(47,42,38,.35);
+             border-radius:10px; padding:6px 12px; max-width:88% }
+.scene .art::before{ content:"🎨 picture: " }
+.pic.has-img .scene{ display:none }
+
+.caption{ font-family:var(--disp); text-align:center; color:var(--ink2);
+          padding:10px 20px 0; font-size:1.05rem }
+
+/* ---------- words area ---------- */
+.words{ padding:26px 34px 30px; flex:1; display:flex; flex-direction:column; gap:16px; justify-content:center }
+.big{ font-family:var(--disp); font-size:clamp(1.6rem,4.4vw,2.3rem); line-height:1.25;
+      color:var(--redd); text-align:center; margin:0 }
+.txt{ font-size:clamp(1.2rem,2.9vw,1.42rem); line-height:1.6; margin:0 }
+.txt b{ color:var(--redd) }
+.pop{
+  align-self:center; font-family:var(--disp); font-size:clamp(1.1rem,2.8vw,1.35rem);
+  color:#fff; background:var(--blue); border:4px solid var(--ink); border-radius:14px;
+  padding:10px 20px; transform:rotate(-1.5deg); box-shadow:4px 5px 0 rgba(0,0,0,.2); text-align:center
+}
+.label{
+  align-self:flex-start; font-family:var(--disp); font-size:1.15rem; color:#fff;
+  border:4px solid var(--ink); border-radius:999px; padding:4px 16px;
+  box-shadow:3px 4px 0 rgba(0,0,0,.2); transform:rotate(-2deg)
+}
+.h{ font-family:var(--disp); font-size:clamp(1.5rem,4vw,2rem); margin:0; line-height:1.2 }
+
+.real{
+  background:#fff6b8; border:3px solid #d9b92a; border-radius:6px;
+  padding:12px 16px; font-size:1.08rem; line-height:1.5; transform:rotate(1deg);
+  box-shadow:3px 4px 0 rgba(0,0,0,.12)
+}
+.real b{ font-family:var(--disp); color:var(--redd) }
+
+/* cover */
+.t-cover .pic{ aspect-ratio:auto; flex:1; min-height:360px; max-height:none }
+.t-cover .words{ flex:none; background:var(--red); color:#fff; text-align:center; gap:6px; padding:24px 30px 28px }
+.t-cover .kick{ font-weight:bold; letter-spacing:.16em; font-size:.8rem; text-transform:uppercase; opacity:.92 }
+.t-cover h1{ font-family:var(--disp); font-size:clamp(1.9rem,5vw,2.8rem); line-height:1.1; margin:4px 0;
+           text-shadow:3px 3px 0 rgba(0,0,0,.25) }
+.t-cover .where{ font-weight:bold }
+.chip{
+  position:absolute; top:16px; right:16px; z-index:3;
+  background:var(--gold); border:5px solid var(--ink); border-radius:50%;
+  width:100px; height:100px; display:grid; place-content:center; text-align:center;
+  transform:rotate(9deg); box-shadow:4px 5px 0 rgba(0,0,0,.28)
+}
+.chip small{ font-size:.66rem; font-weight:bold; letter-spacing:.12em }
+.chip b{ font-family:var(--disp); font-size:2.6rem; line-height:.9 }
+
+/* log */
+.logbox{ background:#eaf3ff; border:4px solid var(--ink); border-radius:14px; padding:6px 18px }
+.logrow{ display:flex; justify-content:space-between; gap:14px; padding:10px 0;
+         border-bottom:2px dotted #9db6cf; font-size:1.12rem }
+.logrow:last-child{ border:0 }
+.logrow span:last-child{ font-family:var(--disp); font-weight:bold; text-align:right }
+
+/* flashcards */
+.cards{ display:grid; grid-template-columns:1fr 1fr; gap:16px }
+.card{ background:#fff; border:4px solid var(--ink); border-radius:16px; padding:16px 12px;
+       text-align:center; box-shadow:4px 5px 0 rgba(0,0,0,.15) }
+.card .jp{ font-size:2.8rem; line-height:1 }
+.card .kanji{ font-size:1rem; color:var(--ink2); margin-top:4px }
+.card .say{ font-family:var(--disp); font-size:1.35rem; color:var(--green); margin-top:8px }
+.card .mean{ font-weight:bold; font-size:1.15rem; margin-top:2px }
+.card .joke{ font-size:.98rem; color:var(--ink2); margin-top:8px; line-height:1.4 }
+
+/* fact */
+.claim{ font-size:clamp(1.2rem,2.9vw,1.4rem); line-height:1.55; margin:0 }
+.reveal{
+  align-self:center; cursor:pointer; font-family:var(--disp); font-size:1.3rem;
+  background:var(--gold); color:var(--ink); border:4px solid var(--ink); border-radius:14px;
+  padding:12px 26px; box-shadow:4px 5px 0 rgba(0,0,0,.25)
+}
+.reveal:active{ transform:translate(3px,4px); box-shadow:none }
+.truth{ display:none; background:#fff; border:4px solid var(--green); border-radius:14px;
+        padding:14px 18px; font-size:1.15rem; line-height:1.55 }
+.truth.on{ display:block; animation:flipIn .35s ease-out }
+
+/* gift */
+.bag{ display:flex; flex-wrap:wrap; gap:8px }
+.bag span{ background:#fff; border:3px solid var(--ink); border-radius:999px; padding:5px 12px; font-size:.98rem }
+.bag span.new{ background:var(--gold); font-weight:bold }
+
+/* love */
+.love .words{ background:#fff }
+.sig{ font-family:var(--disp); font-size:1.6rem; color:var(--red); text-align:right }
+
+/* end */
+.end{ text-align:center }
+.end .big{ color:var(--green) }
+
+/* ---------- today's map ---------- */
+.route{ list-style:none; margin:0; padding:0; position:relative; display:flex; flex-direction:column; gap:10px }
+.route::before{ content:""; position:absolute; left:27px; top:28px; bottom:28px; border-left:5px dotted var(--ink2) }
+.route li{ position:relative; display:flex; align-items:center; gap:14px; font-size:1.15rem }
+.route .n{ flex:none; width:58px; height:58px; border-radius:50%; background:var(--gold); border:4px solid var(--ink);
+           display:grid; place-content:center; font-size:1.6rem; box-shadow:3px 4px 0 rgba(0,0,0,.2); position:relative; z-index:1 }
+.route .n small{ position:absolute; top:-8px; right:-8px; background:var(--red); color:#fff; font-family:var(--disp);
+                 font-size:.85rem; width:24px; height:24px; border-radius:50%; border:3px solid var(--ink); display:grid; place-content:center }
+.route .nm{ font-family:var(--disp); font-weight:bold; font-size:1.2rem; line-height:1.15 }
+.route .wh{ font-size:.9rem; color:var(--ink2) }
+.route .end{ text-align:left; font-size:1rem; color:var(--ink2); padding-left:72px }
+
+/* ---------- stop cards ---------- */
+.stopbar{ display:flex; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap }
+.stamp{ font-family:var(--disp); font-size:.62rem; letter-spacing:.08em; color:var(--red); border:3px solid var(--red); border-radius:50%;
+        width:80px; height:80px; display:grid; place-content:center; text-align:center; line-height:1.05;
+        transform:rotate(12deg); background:rgba(224,69,47,.06) }
+.stamp b{ font-size:1.5rem }
+.pname{ font-family:var(--disp); font-size:clamp(1.6rem,4.6vw,2.3rem); line-height:1.1; margin:0; color:var(--ink) }
+.jpline{ font-size:1.05rem; color:var(--ink2); margin-top:-8px }
+.jpline .k{ font-size:1.3rem; color:var(--ink) }
+.jpline .s{ font-family:var(--disp); color:var(--green); font-weight:bold }
+.wow{ align-self:flex-start; font-family:var(--disp); font-size:clamp(1.1rem,2.8vw,1.35rem); background:var(--gold);
+      border:4px solid var(--ink); border-radius:14px; padding:8px 16px; transform:rotate(1deg); box-shadow:3px 4px 0 rgba(0,0,0,.2) }
+.wow::before{ content:"⭐ WOW: " }
+.bigkid{ background:#eef3ff; border:3px dashed var(--blue); border-radius:14px; padding:12px 16px; font-size:1.05rem; line-height:1.5 }
+.bigkid::before{ content:"🧠 Big Kid Bonus"; display:block; font-family:var(--disp); font-weight:bold; color:var(--blue); font-size:1.1rem; margin-bottom:4px }
+.ask{ background:#fff; border:3px solid var(--purple); border-radius:14px; padding:10px 16px; font-size:1.05rem }
+.ask::before{ content:"💬 Talk About It: "; font-family:var(--disp); font-weight:bold; color:var(--purple) }
+.tag{ align-self:flex-start; font-family:var(--disp); font-size:.95rem; color:var(--ink2);
+      border:2px solid var(--ink2); border-radius:999px; padding:2px 12px; margin-bottom:-4px }
+
+/* ---------- navigation ---------- */
+.nav{
+  position:fixed; left:0; right:0; bottom:0; z-index:10;
+  display:flex; align-items:center; justify-content:center; gap:14px;
+  padding:12px; background:rgba(47,42,38,.92);
+}
+.nav button{
+  font-family:var(--disp); font-size:1.25rem; cursor:pointer;
+  background:var(--gold); color:var(--ink); border:4px solid #000; border-radius:14px;
+  padding:8px 22px; min-width:120px; box-shadow:3px 4px 0 rgba(0,0,0,.4)
+}
+.nav button:disabled{ opacity:.35; cursor:default }
+.nav button:active:not(:disabled){ transform:translate(3px,4px); box-shadow:none }
+.dots{ display:flex; gap:6px; flex-wrap:wrap; justify-content:center; max-width:340px }
+.dots i{ width:11px; height:11px; border-radius:50%; background:rgba(255,255,255,.3); cursor:pointer }
+.dots i.on{ background:var(--gold); transform:scale(1.3) }
+.pnum{ color:#ffe9a8; font-family:var(--disp); font-size:1rem; min-width:64px; text-align:center }
+
+@media (max-width:600px){
+  .words{ padding:20px 20px 24px }
+  .cards{ grid-template-columns:1fr }
+  .nav button{ min-width:84px; padding:8px 12px; font-size:1.05rem }
+  .dots{ display:none }
+  .leaf{ min-height:0 }
+}
+
+/* ---------- print: every page on its own sheet ---------- */
+@media print{
+  *{ -webkit-print-color-adjust:exact !important; print-color-adjust:exact !important }
+  @page{ size:8.5in 11in; margin:.4in }
+  body{ background:#fff; padding:0; display:block }
+  .nav{ display:none }
+  .book{ max-width:none; perspective:none }
+  .leaf{ display:flex !important; flex-direction:column; animation:none !important;
+         box-shadow:none; break-after:page; page-break-after:always; min-height:9.9in }
+  .leaf:last-child{ break-after:auto; page-break-after:auto }
+  .pic{ max-height:none }
+  .reveal{ display:none }
+  .truth{ display:block }
+}
+</style>
+</head>
+<body>
+
+<div class="book" id="book"></div>
+
+<nav class="nav">
+  <button id="prev">◀ Back</button>
+  <div>
+    <div class="dots" id="dots"></div>
+    <div class="pnum" id="pnum"></div>
+  </div>
+  <button id="next">Next ▶</button>
+</nav>
+
+<script>
+(function(){
+  const B = BOOK, book = document.getElementById('book');
+  const esc = s => String(s ?? '');
+  const has = s => s && String(s).trim();
+
+  const pickColor = i => ['#dff1d8','#e4f0ff','#fff0d6','#f4ecff','#ffe6e1','#e8f7f3'][i % 6];
+
+  function picture(p, i){
+    return `
+      <div class="pic" style="background:${pickColor(i)}">
+        <div class="scene">
+          <div class="emo">${esc(p.scene)}</div>
+          ${has(p.art) ? `<div class="art">${esc(p.art)}</div>` : ''}
+        </div>
+        ${has(p.img) ? `<img src="${esc(p.img)}" alt="" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()">` : ''}
+      </div>
+      ${has(p.caption) ? `<div class="caption">${esc(p.caption)}</div>` : ''}`;
+  }
+  const real = p => has(p.real) ? `<div class="real"><b>What REALLY happened: </b>${esc(p.real)}</div>` : '';
+  const pop  = t => has(t) ? `<div class="pop">${t}</div>` : '';
+  const lbl  = (t,c) => `<div class="label" style="background:${c}">${t}</div>`;
+
+  const stopTag = p => p.stop ? `<div class="tag">📍 Stop ${p.stop}: ${esc(B.stops[p.stop-1].name)} ${B.stops[p.stop-1].emoji}</div>` : '';
+
+  const render = {
+    map:(p,i)=>`${picture(p,i)}
+      <div class="words">
+        ${lbl('🗺️ Today\'s Adventure Map','var(--blue)')}
+        ${has(p.text) ? `<p class="txt">${p.text}</p>` : ''}
+        <ul class="route">
+          ${has(B.start) ? `<li class="end">${B.start}</li>` : ''}
+          ${B.stops.map((s,k)=>`<li><span class="n">${s.emoji}<small>${k+1}</small></span>
+            <span><div class="nm">${esc(s.name)}</div><div class="wh">${esc(s.when)}</div></span></li>`).join('')}
+          ${has(B.finish) ? `<li class="end">${B.finish}</li>` : ''}
+        </ul>
+      </div>`,
+
+    stop:(p,i)=>{ const s=B.stops[p.stop-1]; return `${picture(p,i)}
+      <div class="words">
+        <div class="stopbar">
+          ${lbl(`📍 Stop ${p.stop} of ${B.stops.length}`,'var(--red)')}
+          <div class="stamp"><span>STAMP</span><b>${s.emoji}</b><span>✓</span></div>
+        </div>
+        <h2 class="pname">${esc(p.name || s.name)}</h2>
+        ${has(p.jp) ? `<div class="jpline"><span class="k">${p.jp}</span> · say <span class="s">"${p.say}"</span>${has(p.mean)?` · means ${p.mean}`:''}</div>` : ''}
+        <p class="txt">${p.what}</p>
+        ${has(p.wow) ? `<div class="wow">${p.wow}</div>` : ''}
+        ${has(p.bigkid) ? `<div class="bigkid">${p.bigkid}</div>` : ''}
+        ${has(p.ask) ? `<div class="ask">${p.ask}</div>` : ''}
+        ${real(p)}
+      </div>`; },
+    cover:(p,i)=>`
+      <div class="chip"><small>DAY</small><b>${B.day}</b></div>
+      ${picture(p,i)}
+      <div class="words">
+        <div class="kick">Tomo's Totally Reliable Guide to Japan</div>
+        <h1>${esc(B.title)}</h1>
+        <div class="where">${esc(B.date)} &nbsp;•&nbsp; ${esc(B.place)}</div>
+      </div>`,
+
+    story:(p,i)=>`${picture(p,i)}
+      <div class="words">
+        ${stopTag(p)}
+        ${has(p.big)  ? `<p class="big">${p.big}</p>` : ''}
+        ${has(p.text) ? `<p class="txt">${p.text}</p>` : ''}
+        ${pop(p.pop)}${real(p)}
+      </div>`,
+
+    log:(p,i)=>`${picture(p,i)}
+      <div class="words">
+        ${lbl('📓 Tomo\'s Secret Log','var(--blue)')}
+        <div class="logbox">${p.rows.map(r=>`<div class="logrow"><span>${r[0]}</span><span>${r[1]}</span></div>`).join('')}</div>
+      </div>`,
+
+    words:(p,i)=>`${picture(p,i)}
+      <div class="words">
+        ${lbl('🗣️ Say It In Japanese!','var(--green)')}
+        <div class="cards">${p.words.map(w=>`
+          <div class="card">
+            <div class="jp">${w.jp}</div>
+            <div class="kanji">also written: ${w.kanji}</div>
+            <div class="say">"${w.say}"</div>
+            <div class="mean">= ${w.mean}</div>
+            <div class="joke">${w.joke}</div>
+          </div>`).join('')}</div>
+      </div>`,
+
+    why:(p,i)=>`${picture(p,i)}
+      <div class="words">
+        ${stopTag(p)}
+        ${lbl('🏮 Why Do They Do That?','var(--purple)')}
+        <h2 class="h">${esc(p.title)}</h2>
+        <p class="txt">${p.text}</p>
+        ${pop(p.pop)}
+        ${has(p.text2) ? `<p class="txt">${p.text2}</p>` : ''}
+      </div>`,
+
+    try:(p,i)=>`${picture(p,i)}
+      <div class="words">
+        ${lbl('🏠 Try This At Home!','var(--purple)')}
+        <p class="txt">${p.text}</p>
+      </div>`,
+
+    fact:(p,i)=>`${picture(p,i)}
+      <div class="words">
+        ${lbl('⚠️ Tomo\'s Totally True Fact','var(--red)')}
+        <p class="claim">${p.claim}</p>
+        <button class="reveal" data-reveal>Wait… is that true? 👀</button>
+        <div class="truth"><b>The REAL truth:</b> ${p.truth}</div>
+      </div>`,
+
+    gift:(p,i)=>`${picture(p,i)}
+      <div class="words">
+        ${lbl('🎁 In The Souvenir Bag','var(--green)')}
+        <p class="txt"><b>Today I added:</b> ${p.today}</p>
+        ${has(p.note) ? `<p class="txt" style="color:var(--ink2)">${p.note}</p>` : ''}
+        <div class="bag">${p.bag.map((b,k)=>`<span class="${k===p.bag.length-1?'new':''}">${b}</span>`).join('')}</div>
+      </div>`,
+
+    find:(p,i)=>`${picture(p,i)}
+      <div class="words" style="background:var(--ink);color:#ffe9a8">
+        ${lbl('🔍 Find Tomo!','var(--red)')}
+        <p class="big" style="color:#ffe9a8">${p.text}</p>
+      </div>`,
+
+    love:(p,i)=>`<div class="love" style="display:contents">${picture(p,i)}
+      <div class="words">
+        ${lbl('💌 P.S.','var(--red)')}
+        <p class="txt">${p.text}</p>
+        <div class="sig">${esc(B.from)}</div>
+      </div></div>`,
+
+    next:(p,i)=>`${picture(p,i)}
+      <div class="words end">
+        ${lbl('👀 Tomorrow…','var(--blue)')}
+        <p class="big">${p.text}</p>
+        ${pop(p.pop)}
+        <p class="txt" style="text-align:center;color:var(--ink2)">— The End of Day ${B.day} —</p>
+      </div>`
+  };
+
+  B.pages.forEach((p,i)=>{
+    const el = document.createElement('section');
+    el.className = 'leaf t-' + p.type;
+    el.innerHTML = (render[p.type] || render.story)(p,i);
+    book.appendChild(el);
+  });
+
+  book.addEventListener('click', e=>{
+    const b = e.target.closest('[data-reveal]');
+    if(!b) return;
+    b.nextElementSibling.classList.add('on');
+    b.textContent = 'OK fine, I made that up 🙃';
+  });
+
+  /* ---------- page turning ---------- */
+  const leaves = [...book.children], dots = document.getElementById('dots');
+  const prev = document.getElementById('prev'), next = document.getElementById('next'), pnum = document.getElementById('pnum');
+  leaves.forEach((_,i)=>{ const d=document.createElement('i'); d.onclick=()=>go(i); dots.appendChild(d); });
+
+  let cur = Math.min(Math.max((parseInt(location.hash.slice(1))||1)-1,0),leaves.length-1);
+  function go(n){
+    if(n<0 || n>=leaves.length) return;
+    const back = n < cur;
+    leaves.forEach(l=>l.classList.remove('on','back'));
+    leaves[n].classList.add('on'); if(back) leaves[n].classList.add('back');
+    [...dots.children].forEach((d,i)=>d.classList.toggle('on',i===n));
+    cur = n;
+    prev.disabled = n===0;
+    next.textContent = n===leaves.length-1 ? 'The End ⭐' : 'Next ▶';
+    next.disabled = n===leaves.length-1;
+    pnum.textContent = `Page ${n+1} of ${leaves.length}`;
+    history.replaceState(null,'','#'+(n+1));
+    window.scrollTo({top:0,behavior:'smooth'});
+  }
+  prev.onclick = ()=>go(cur-1);
+  next.onclick = ()=>go(cur+1);
+  document.addEventListener('keydown',e=>{
+    if(e.key==='ArrowRight'||e.key===' '){ e.preventDefault(); go(cur+1); }
+    if(e.key==='ArrowLeft'){ go(cur-1); }
+  });
+  let sx=null;
+  book.addEventListener('touchstart',e=>{ sx=e.touches[0].clientX },{passive:true});
+  book.addEventListener('touchend',e=>{
+    if(sx===null) return; const dx=e.changedTouches[0].clientX-sx;
+    if(Math.abs(dx)>50) go(cur+(dx<0?1:-1)); sx=null;
+  });
+  go(cur);
+})();
+</script>
+</body>
+</html>

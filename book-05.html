@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tomo's Totally Reliable Guide — Day 5</title>
+
+<script>
+/* ==========================================================================
+   ★★★  THE ONLY PART YOU EVER EDIT  ★★★
+
+   Every page of the book is one { } block in the "pages" list below.
+   Change the words. Change the picture file. That's it.
+
+   WHEN YOU GET HOME FROM JAPAN:
+     1. Put your real photo in the images/ folder
+     2. Change that page's  img:  line to your photo's file name
+     3. Optional: fill in  caption:  or  real:  — blank ones stay hidden
+         caption = a line under the picture
+         real    = a yellow sticky note: "What REALLY happened..."
+   ========================================================================= */
+
+const BOOK = {
+  day   : 5,
+  date  : "Wednesday, October 7",
+  place : "Tokyo → Kyoto, Japan",
+  title : "A Temple, a Tower, and a Train That Will Not Wait",
+  from  : "— Love, Mom & Dad",
+
+  /* EVERY place we go today, in order. The map page draws these.
+     Rule: every stop on the itinerary gets a spot here AND its own stop card. */
+  start : "🧳 This morning: we packed our bags and said bye-bye to our Tokyo hotel.",
+  stops : [
+    { name:"The Emperor's Palace",   emoji:"🏯", when:"morning" },
+    { name:"Tokyo Station",          emoji:"🚉", when:"late morning" },
+    { name:"Tokyo Skytree",          emoji:"🗼", when:"lunchtime" },
+    { name:"Senso-ji Temple",        emoji:"🏮", when:"afternoon" },
+    { name:"The Bullet Train",       emoji:"🚄", when:"6:48 PM sharp!" },
+    { name:"Our Kyoto House",        emoji:"🏡", when:"9:00 PM (way past bedtime)" }
+  ],
+  finish: "😴 Everybody asleep. Even me. Especially me.",
+
+  pages : [
+
+    /* ---------- COVER ---------- */
+    { type:"cover",
+      img:"images/day-05-cover.jpg", scene:"🏮🦝🗼🚄", art:"Tomo hanging off a giant red paper lantern, the Skytree behind him and a bullet train zooming past" },
+
+    /* ---------- TODAY'S MAP ---------- */
+    { type:"map",
+      text:`Today was our <b>LAST day in Tokyo</b>. So we tried to see <b>everything</b> before dinner. Then we hopped on a train to a brand-new city. <b>6 stops</b> today. Hold on to your tail. 🐾`,
+      img:"images/day-05-map.jpg", scene:"🗺️🐾🐾🐾🚄", art:"A hand-drawn map of Tokyo with 4 numbered stops, then a dotted train line zooming off the page toward Kyoto" },
+
+    /* ========== STOP 1: THE EMPEROR'S PALACE ========== */
+    { type:"stop", stop:1,
+      name:"The Imperial Palace",
+      jp:"皇居", say:"KOH-kyo", mean:"the emperor's home",
+      what:`The home of Japan's <b>emperor</b> (that's like a king). He <b>really lives here</b>, right in the middle of the biggest city in the world.`,
+      wow :"There's a MOAT. With giant fish in it. 🏰🐟",
+      bigkid:`Before the emperor moved in, this was a <b>giant castle</b> for the <b>shogun</b> (SHOW-gun), the top samurai who really ran Japan for 250 years. The huge stone walls are still here. Nobody used cement. The stones are just stacked so perfectly they've stayed put for 400 years, even through earthquakes.`,
+      ask :"If you lived in a palace with a moat, what would you keep in the water?",
+      img :"images/day-05-stop1.jpg", scene:"🏯🌉🐟", art:"A stone bridge over a green moat, old stone walls and a white watchtower behind it, pine trees",
+      caption:"", real:"" },
+
+    { type:"story", stop:1,
+      text:`Tokyo is loud. Beeping, honking, trains, crowds. But you walk into the palace gardens and it just… <b>goes quiet.</b> Big trees. Big sky. Old stone walls.`,
+      pop :"I tried to find the emperor to say hi. The guards said no. Politely. Twice. 🙇",
+      img :"images/day-05-p01.jpg", scene:"🦝🌲💂", art:"Tomo waving at a very polite palace guard who is bowing and pointing him the other way",
+      caption:"", real:"" },
+
+    /* ========== STOP 2: TOKYO STATION ========== */
+    { type:"stop", stop:2,
+      jp:"東京駅", say:"TOH-kyoh EH-kee", mean:"Tokyo station",
+      what:`A <b>train station</b> that looks like a <b>red brick castle</b>. It's over 100 years old.`,
+      wow :"Thousands of trains stop here. EVERY. DAY. 🚆🚆🚆",
+      bigkid:`During World War II, bombs knocked the domes off the roof. For 60+ years the station just had a flat top. Then Japan spent years rebuilding it <b>exactly</b> the way it looked in 1914, down to the carvings of birds and animals hiding up inside the domes.`,
+      ask :"If you could take a train anywhere in the world, where would you go?",
+      img :"images/day-05-stop2.jpg", scene:"🚉🧱🏰", art:"The red brick front of Tokyo Station with two round domes, tiny people and taxis in front",
+      caption:"", real:"" },
+
+    { type:"story", stop:2,
+      text:`Look up inside the domes and there are 8 animals carved way up high, one for each direction. Down below, a <b>river of people</b> walks by, and nobody bumps into anybody.`,
+      pop :"I bumped into 4 people. They all said sorry to ME. 😳",
+      img :"images/day-05-p02.jpg", scene:"🦝👀⬆️", art:"Tomo lying on his back on the station floor staring up at the carved dome, people stepping carefully around him",
+      caption:"", real:"" },
+
+    /* ========== STOP 3: TOKYO SKYTREE ========== */
+    { type:"stop", stop:3,
+      jp:"スカイツリー", say:"SKY-tsoo-ree", mean:"sky tree",
+      what:`The <b>tallest tower in the whole world</b>. You ride an elevator so fast your ears pop, and then you can see ALL of Tokyo.`,
+      wow :"634 meters tall. That's 2,080 feet! 🗼",
+      bigkid:`The height wasn't random. In Japanese, 6-3-4 can be read <b>"mu-sa-shi,"</b> and <b>Musashi</b> is the old name for the land Tokyo sits on. So the whole tower is basically a giant number joke. Japan <b>loves</b> number puns.`,
+      ask :"What would you want to build that's taller than anything else in the world?",
+      img :"images/day-05-stop3.jpg", scene:"🗼☁️🏙️", art:"The white Skytree poking through the clouds, Tokyo stretching out forever below",
+      caption:"", real:"" },
+
+    { type:"story", stop:3,
+      big :"From the top, Tokyo does not end.",
+      text:`You look left. City. Right. City. Straight ahead. City, city, city, until the sky gets blurry. And there's a <b>glass floor</b> you can stand on and look straight down.`,
+      pop :"I did NOT stand on the glass floor. I lay on it. Flat. Holding on. 🫠",
+      img :"images/day-05-p03.jpg", scene:"🦝🪟⬇️😱", art:"Tomo spread flat on a glass floor, eyes huge, tiny streets and cars far below him",
+      caption:"", real:"" },
+
+    /* ========== STOP 4: SENSO-JI TEMPLE ========== */
+    { type:"stop", stop:4,
+      jp:"浅草寺", say:"SEN-soh-jee", mean:"Senso Temple",
+      what:`The <b>oldest temple in Tokyo</b>. It was built almost <b>1,400 years ago</b>, way before there even was a Tokyo.`,
+      wow :"It started with a tiny gold statue caught in a fishing net. 🎣✨",
+      bigkid:`The story goes: in the year 628, two brothers were fishing in the river and pulled up a tiny golden statue of <b>Kannon</b> (KAH-non), a Buddhist figure known for kindness. They kept tossing it back. It kept coming back. So their village built a little temple for it. Today about <b>30 million</b> people visit every year.`,
+      ask :"If you found something magical in a fishing net, what would you want it to be?",
+      img :"images/day-05-stop4.jpg", scene:"🏮⛩️🎣", art:"The big red Thunder Gate with its giant red lantern, a five-story pagoda peeking up behind",
+      caption:"", real:"" },
+
+    { type:"story", stop:4,
+      text:`You walk in through the <b>Thunder Gate</b>. Hanging in the middle is a giant red paper lantern as tall as <b>two grown-ups</b>. On each side stands a big wooden guard: the God of Thunder and the God of Wind.`,
+      pop :"The Wind God looked right at me. I said sorry for everything. 🌬️",
+      img :"images/day-05-p04.jpg", scene:"🏮🌩️🌬️🦝", art:"Tomo tiny under the enormous red lantern, one grumpy wooden guard statue glaring down",
+      caption:"", real:"" },
+
+    { type:"story", stop:4,
+      text:`In front of the temple is a big pot full of smoky <b>incense</b> (sweet-smelling smoke). People scoop the smoke onto themselves. On a sore shoulder. On a bad knee. On their head before a big test.`,
+      pop :"I stood in the smoke for 11 minutes. Now I smell VERY smart. Mom made me ride outside the bag. 💨",
+      img :"images/day-05-p05.jpg", scene:"💨🦝💨", art:"Tomo arms out, eyes closed, in a big cloud of incense smoke, people waving smoke onto their heads around him",
+      caption:"", real:"" },
+
+    { type:"story", stop:4,
+      text:`Then you can shake a metal can until one stick falls out. The stick has a number. The number opens a tiny drawer. In the drawer: <b>your fortune</b>. Some are great. Some are… not.`,
+      pop :"If you get a bad one, you tie it to a rack and LEAVE IT THERE. Bad luck stays at the temple. Genius. 🪢",
+      img :"images/day-05-p06.jpg", scene:"🥢📜🪢", art:"A wall of tiny wooden drawers, and a rack covered in hundreds of little white paper fortunes tied in knots",
+      caption:"", real:"" },
+
+    { type:"story", stop:4,
+      text:`Here's a secret about temples. Most of the time our brains are thinking about yesterday or tomorrow. A temple is a place built to help you think about <b>right now</b>. Just for a few minutes.`,
+      pop :"Your family stood there and nobody looked at a phone. I counted. 📵",
+      img :"images/day-05-p07.jpg", scene:"🧘🏮🙂", art:"The family standing quietly in front of the big temple hall, soft golden afternoon light",
+      caption:"", real:"" },
+
+    { type:"why", stop:4,
+      title:"You Wash Before You Go In",
+      text:`At almost every temple in Japan there's a stone tub of water by the entrance. You scoop some with a wooden ladle, rinse your <b>left hand</b>, then your <b>right</b>, then a tiny sip to rinse your mouth. (Spit it out on the ground, not back in the tub!)`,
+      pop:"You are not dirty. You're just coming in from OUTSIDE. 🚪",
+      text2:`It's a way of leaving the busy world behind before you step in. Japan does this at temples, at shrines, and even at the front door of every house, where everybody takes off their shoes.`,
+      img:"images/day-05-why.jpg", scene:"🪣💧🙌", art:"A stone water basin with bamboo ladles resting across it, a kid carefully pouring water over their hand" },
+
+    /* ========== STOP 5: THE BULLET TRAIN ========== */
+    { type:"stop", stop:5,
+      name:"The Bullet Train: Shinkansen",
+      jp:"新幹線", say:"SHIN-kahn-sen", mean:"new main line",
+      what:`A super-fast train shaped like a <b>bird's beak</b>. It zooms up to <b>177 miles an hour</b>. That's almost 3 times faster than a car on the highway!`,
+      wow :"It left at 6:48. Not 6:49. 6:48. ⏱️",
+      bigkid:`Japan's bullet trains have run for 60 years, and on average they're late by <b>less than one minute</b> all year. If a train is even 5 minutes late, the railway gives people a <b>note that says sorry</b> to show their teacher or boss.`,
+      ask :"Why do you think being on time is SO important in Japan?",
+      img :"images/day-05-stop5.jpg", scene:"🚄💨💨💨", art:"A white bullet train with its long pointy nose sliding into a spotless platform, people lined up in neat rows",
+      caption:"", real:"" },
+
+    { type:"story", stop:5,
+      text:`First: dinner. You buy an <b>ekiben</b> (eh-kee-BEN), which is a lunch box made just for eating on a train. Every part of Japan has its <b>own special box</b>. Some even heat themselves up when you pull a string!`,
+      pop :"I wanted all of them. I got the ribbon off one. 🎀",
+      img :"images/day-05-p08.jpg", scene:"🍱🍱🍱🦝", art:"A shop wall stacked with colorful train lunch boxes, Tomo reaching for the top one",
+      caption:"", real:"" },
+
+    { type:"story", stop:5,
+      text:`When the train pulls in, a cleaning team in pink and blue lines up and <b>bows to it</b>. Then they clean the WHOLE train in <b>7 minutes</b>. They even spin every seat around to face the right way.`,
+      pop :"I tried to help. I got spun around with a seat. Twice. 🌀",
+      img :"images/day-05-p09.jpg", scene:"🧹🙇🚄", art:"A row of train cleaners in bright uniforms bowing to a bullet train, Tomo spinning on a rotating seat inside",
+      caption:"", real:"" },
+
+    /* ========== STOP 6: OUR KYOTO HOUSE ========== */
+    { type:"stop", stop:6,
+      name:"Our Kyoto House",
+      jp:"京都", say:"KYOH-toh", mean:"capital city",
+      what:`A <b>brand-new city</b>! Two hours later, we got off the train in Kyoto and went to our house near an old castle. It has <b>floors made of straw mats</b>.`,
+      wow :"No shoes on the straw floors! 🧦",
+      bigkid:`The straw mats are called <b>tatami</b> (tah-TAH-mee). They're so standard that people in Japan measure rooms by them. Instead of saying "a big bedroom," they say "an <b>8-mat room</b>." Shoes would wreck them, so shoes stay by the door. Every time.`,
+      ask :"If your room was measured in mats, how many mats big do you think it would be?",
+      img :"images/day-05-stop6.jpg", scene:"🏡🌙🧦", art:"A wooden Kyoto house at night with a glowing paper lantern by the door and a row of shoes lined up outside",
+      caption:"", real:"" },
+
+    /* ---------- TRY THIS ---------- */
+    { type:"try",
+      text:`Before you walk into your room tonight, <b>stop in the doorway</b> for 3 seconds. Just 3. Take one big breath. Leave the whole busy day outside. <b>Then</b> go in.`,
+      img:"images/day-05-try.jpg", scene:"🚪⏱️😌", art:"A kid standing in a bedroom doorway with eyes closed, Tomo counting 1-2-3 on his fingers" },
+
+    /* ---------- TOMO'S LOG ---------- */
+    { type:"log",
+      rows:[
+        ["Places we went",          "6 (check the map!)"],
+        ["Emperors I said hi to",   "0 (the guards said no)"],
+        ["Minutes in the smoke",    "11"],
+        ["Times spun by a seat",    "2"],
+        ["Minutes the train was late", "0. ZERO."]
+      ],
+      img:"images/day-05-log.jpg", scene:"📓✏️🦝", art:"Tomo scribbling in his little red notebook on the bullet train, city lights zooming by the window" },
+
+    /* ---------- JAPANESE WORDS ---------- */
+    { type:"words",
+      words:[
+        { jp:"しんかんせん", kanji:"新幹線", say:"SHIN-kahn-sen", mean:"bullet train", joke:"Faster than you. Faster than me. Faster than my excuses." },
+        { jp:"えきべん", kanji:"駅弁", say:"eh-kee-BEN", mean:"train lunch box", joke:"eki (station) + bento (lunch box). Tastes better at 177 mph." }
+      ],
+      img:"images/day-05-words.jpg", scene:"🚄 🍱", art:"A bullet train and a lunch box drawn like flashcards" },
+
+    /* ---------- TOMO'S TOTALLY TRUE FACT (it isn't) ---------- */
+    { type:"fact",
+      claim:`The bullet train is so fast because it's <b>shy</b>. It doesn't like being looked at, so it zooms away as quick as it can.`,
+      truth:`Its long pointy nose was copied from a <b>kingfisher</b>, a bird that dives into water without making a splash. The old rounder trains made a loud BOOM coming out of tunnels. The bird-beak nose fixed it. So it's not shy. It's just part bird.`,
+      img:"images/day-05-fact.jpg", scene:"🐦➡️🚄", art:"A kingfisher diving into water next to a bullet train nose, drawn side by side so they match" },
+
+    /* ---------- SOUVENIR BAG ---------- */
+    { type:"gift",
+      today:"A ribbon from a train lunch box. 🎀",
+      note :"(I also tried to take the giant lantern. It did not fit.)",
+      bag  :["🥨 an airplane pretzel","📜 a chopstick wrapper","🏎️ a go-kart sticker","🍁 one perfect leaf","🎀 a lunchbox ribbon"],
+      img:"images/day-05-gift.jpg", scene:"🎒✨", art:"Tomo's yellow bag open on a train seat, the souvenirs spilling out" },
+
+    /* ---------- FIND TOMO ---------- */
+    { type:"find",
+      text:"Can you find me? I'm hiding in the incense smoke at the temple. Look for two little arms sticking out.",
+      img:"images/day-05-find.jpg", scene:"💨💨🏮💨💨", art:"A big cloud of temple smoke with crowds around it, and just Tomo's two tiny arms poking out" },
+
+    /* ---------- LOVE NOTE ---------- */
+    { type:"love",
+      text:`Today we rode the fastest train we've ever been on. And the whole time, we kept looking out the window thinking: <b>"We wish you were in the seat next to us."</b><br><br>Every mile we go, we're one step closer to coming home to you.`,
+      img:"images/day-05-love.jpg", scene:"💌❤️🚄", art:"A hand-drawn postcard of a bullet train with a heart-shaped window" },
+
+    /* ---------- TOMORROW ---------- */
+    { type:"next",
+      text:`Tomorrow: a <b>palace with crunchy rocks</b>, a forest of <b>giant green poles</b>, and a mountain full of <b>wild monkeys</b>. 🐒`,
+      pop:"Monkeys seem nice. I'm sure it'll be fine. 🙂",
+      img:"images/day-05-next.jpg", scene:"🏯🎋🐒", art:"Tall bamboo with a monkey peeking out, eyeing a rice ball" }
+  ]
+};
+</script>
+<script src="lock.js"></script>
+
+<style>
+/* =========================================================================
+   MACHINERY — nothing below here needs editing
+   ====================================================================== */
+:root{
+  --paper:#fffaf0; --ink:#2f2a26; --ink2:#6a5f54;
+  --red:#e0452f; --redd:#b32d1c; --blue:#2f7fb5; --green:#4f9447;
+  --gold:#f2b134; --purple:#7b5aa8;
+  --disp:"Segoe Print","Bradley Hand","Comic Sans MS","Chalkboard SE",cursive;
+  --body:"Trebuchet MS",Verdana,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0; font-family:var(--body); color:var(--ink);
+  background:
+    radial-gradient(circle at 12% 18%, rgba(255,255,255,.55) 0 2px, transparent 3px),
+    radial-gradient(circle at 62% 72%, rgba(255,255,255,.5) 0 2px, transparent 3px),
+    #f3c95f;
+  background-size:44px 44px,66px 66px,auto;
+  display:flex; flex-direction:column; align-items:center;
+  padding:18px 12px 110px;
+  -webkit-text-size-adjust:100%;
+  user-select:none;
+}
+
+/* ---------- the book ---------- */
+.book{ width:100%; max-width:820px; position:relative; perspective:1800px }
+.leaf{
+  display:none;
+  background:var(--paper);
+  border:5px solid var(--ink);
+  border-radius:24px;
+  box-shadow:12px 14px 0 rgba(0,0,0,.22);
+  overflow:hidden;
+  min-height:600px;
+}
+.leaf.on{ display:flex; flex-direction:column; animation:flipIn .45s ease-out }
+.leaf.on.back{ animation:flipBack .45s ease-out }
+@keyframes flipIn  { from{ transform:rotateY(-14deg) translateX(40px); opacity:0 } to{ transform:none; opacity:1 } }
+@keyframes flipBack{ from{ transform:rotateY(14deg) translateX(-40px); opacity:0 } to{ transform:none; opacity:1 } }
+
+/* ---------- picture area ---------- */
+.pic{ position:relative; aspect-ratio:4/3; max-height:44vh; width:100%; border-bottom:5px solid var(--ink); overflow:hidden }
+.pic img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover }
+.scene{
+  position:absolute; inset:0; display:flex; flex-direction:column;
+  align-items:center; justify-content:center; gap:14px; text-align:center; padding:20px;
+}
+.scene .emo{ font-size:clamp(3.2rem,11vw,6.4rem); letter-spacing:.08em; line-height:1.1;
+             filter:drop-shadow(3px 4px 0 rgba(0,0,0,.15)) }
+.scene .art{ font-family:var(--disp); font-size:.95rem; color:rgba(47,42,38,.6);
+             background:rgba(255,255,255,.6); border:2px dashed rgba(47,42,38,.35);
+             border-radius:10px; padding:6px 12px; max-width:88% }
+.scene .art::before{ content:"🎨 picture: " }
+.pic.has-img .scene{ display:none }
+
+.caption{ font-family:var(--disp); text-align:center; color:var(--ink2);
+          padding:10px 20px 0; font-size:1.05rem }
+
+/* ---------- words area ---------- */
+.words{ padding:26px 34px 30px; flex:1; display:flex; flex-direction:column; gap:16px; justify-content:center }
+.big{ font-family:var(--disp); font-size:clamp(1.6rem,4.4vw,2.3rem); line-height:1.25;
+      color:var(--redd); text-align:center; margin:0 }
+.txt{ font-size:clamp(1.2rem,2.9vw,1.42rem); line-height:1.6; margin:0 }
+.txt b{ color:var(--redd) }
+.pop{
+  align-self:center; font-family:var(--disp); font-size:clamp(1.1rem,2.8vw,1.35rem);
+  color:#fff; background:var(--blue); border:4px solid var(--ink); border-radius:14px;
+  padding:10px 20px; transform:rotate(-1.5deg); box-shadow:4px 5px 0 rgba(0,0,0,.2); text-align:center
+}
+.label{
+  align-self:flex-start; font-family:var(--disp); font-size:1.15rem; color:#fff;
+  border:4px solid var(--ink); border-radius:999px; padding:4px 16px;
+  box-shadow:3px 4px 0 rgba(0,0,0,.2); transform:rotate(-2deg)
+}
+.h{ font-family:var(--disp); font-size:clamp(1.5rem,4vw,2rem); margin:0; line-height:1.2 }
+
+.real{
+  background:#fff6b8; border:3px solid #d9b92a; border-radius:6px;
+  padding:12px 16px; font-size:1.08rem; line-height:1.5; transform:rotate(1deg);
+  box-shadow:3px 4px 0 rgba(0,0,0,.12)
+}
+.real b{ font-family:var(--disp); color:var(--redd) }
+
+/* cover */
+.t-cover .pic{ aspect-ratio:auto; flex:1; min-height:360px; max-height:none }
+.t-cover .words{ flex:none; background:var(--red); color:#fff; text-align:center; gap:6px; padding:24px 30px 28px }
+.t-cover .kick{ font-weight:bold; letter-spacing:.16em; font-size:.8rem; text-transform:uppercase; opacity:.92 }
+.t-cover h1{ font-family:var(--disp); font-size:clamp(1.9rem,5vw,2.8rem); line-height:1.1; margin:4px 0;
+           text-shadow:3px 3px 0 rgba(0,0,0,.25) }
+.t-cover .where{ font-weight:bold }
+.chip{
+  position:absolute; top:16px; right:16px; z-index:3;
+  background:var(--gold); border:5px solid var(--ink); border-radius:50%;
+  width:100px; height:100px; display:grid; place-content:center; text-align:center;
+  transform:rotate(9deg); box-shadow:4px 5px 0 rgba(0,0,0,.28)
+}
+.chip small{ font-size:.66rem; font-weight:bold; letter-spacing:.12em }
+.chip b{ font-family:var(--disp); font-size:2.6rem; line-height:.9 }
+
+/* log */
+.logbox{ background:#eaf3ff; border:4px solid var(--ink); border-radius:14px; padding:6px 18px }
+.logrow{ display:flex; justify-content:space-between; gap:14px; padding:10px 0;
+         border-bottom:2px dotted #9db6cf; font-size:1.12rem }
+.logrow:last-child{ border:0 }
+.logrow span:last-child{ font-family:var(--disp); font-weight:bold; text-align:right }
+
+/* flashcards */
+.cards{ display:grid; grid-template-columns:1fr 1fr; gap:16px }
+.card{ background:#fff; border:4px solid var(--ink); border-radius:16px; padding:16px 12px;
+       text-align:center; box-shadow:4px 5px 0 rgba(0,0,0,.15) }
+.card .jp{ font-size:2.8rem; line-height:1 }
+.card .kanji{ font-size:1rem; color:var(--ink2); margin-top:4px }
+.card .say{ font-family:var(--disp); font-size:1.35rem; color:var(--green); margin-top:8px }
+.card .mean{ font-weight:bold; font-size:1.15rem; margin-top:2px }
+.card .joke{ font-size:.98rem; color:var(--ink2); margin-top:8px; line-height:1.4 }
+
+/* fact */
+.claim{ font-size:clamp(1.2rem,2.9vw,1.4rem); line-height:1.55; margin:0 }
+.reveal{
+  align-self:center; cursor:pointer; font-family:var(--disp); font-size:1.3rem;
+  background:var(--gold); color:var(--ink); border:4px solid var(--ink); border-radius:14px;
+  padding:12px 26px; box-shadow:4px 5px 0 rgba(0,0,0,.25)
+}
+.reveal:active{ transform:translate(3px,4px); box-shadow:none }
+.truth{ display:none; background:#fff; border:4px solid var(--green); border-radius:14px;
+        padding:14px 18px; font-size:1.15rem; line-height:1.55 }
+.truth.on{ display:block; animation:flipIn .35s ease-out }
+
+/* gift */
+.bag{ display:flex; flex-wrap:wrap; gap:8px }
+.bag span{ background:#fff; border:3px solid var(--ink); border-radius:999px; padding:5px 12px; font-size:.98rem }
+.bag span.new{ background:var(--gold); font-weight:bold }
+
+/* love */
+.love .words{ background:#fff }
+.sig{ font-family:var(--disp); font-size:1.6rem; color:var(--red); text-align:right }
+
+/* end */
+.end{ text-align:center }
+.end .big{ color:var(--green) }
+
+/* ---------- today's map ---------- */
+.route{ list-style:none; margin:0; padding:0; position:relative; display:flex; flex-direction:column; gap:10px }
+.route::before{ content:""; position:absolute; left:27px; top:28px; bottom:28px; border-left:5px dotted var(--ink2) }
+.route li{ position:relative; display:flex; align-items:center; gap:14px; font-size:1.15rem }
+.route .n{ flex:none; width:58px; height:58px; border-radius:50%; background:var(--gold); border:4px solid var(--ink);
+           display:grid; place-content:center; font-size:1.6rem; box-shadow:3px 4px 0 rgba(0,0,0,.2); position:relative; z-index:1 }
+.route .n small{ position:absolute; top:-8px; right:-8px; background:var(--red); color:#fff; font-family:var(--disp);
+                 font-size:.85rem; width:24px; height:24px; border-radius:50%; border:3px solid var(--ink); display:grid; place-content:center }
+.route .nm{ font-family:var(--disp); font-weight:bold; font-size:1.2rem; line-height:1.15 }
+.route .wh{ font-size:.9rem; color:var(--ink2) }
+.route .end{ text-align:left; font-size:1rem; color:var(--ink2); padding-left:72px }
+
+/* ---------- stop cards ---------- */
+.stopbar{ display:flex; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap }
+.stamp{ font-family:var(--disp); font-size:.62rem; letter-spacing:.08em; color:var(--red); border:3px solid var(--red); border-radius:50%;
+        width:80px; height:80px; display:grid; place-content:center; text-align:center; line-height:1.05;
+        transform:rotate(12deg); background:rgba(224,69,47,.06) }
+.stamp b{ font-size:1.5rem }
+.pname{ font-family:var(--disp); font-size:clamp(1.6rem,4.6vw,2.3rem); line-height:1.1; margin:0; color:var(--ink) }
+.jpline{ font-size:1.05rem; color:var(--ink2); margin-top:-8px }
+.jpline .k{ font-size:1.3rem; color:var(--ink) }
+.jpline .s{ font-family:var(--disp); color:var(--green); font-weight:bold }
+.wow{ align-self:flex-start; font-family:var(--disp); font-size:clamp(1.1rem,2.8vw,1.35rem); background:var(--gold);
+      border:4px solid var(--ink); border-radius:14px; padding:8px 16px; transform:rotate(1deg); box-shadow:3px 4px 0 rgba(0,0,0,.2) }
+.wow::before{ content:"⭐ WOW: " }
+.bigkid{ background:#eef3ff; border:3px dashed var(--blue); border-radius:14px; padding:12px 16px; font-size:1.05rem; line-height:1.5 }
+.bigkid::before{ content:"🧠 Big Kid Bonus"; display:block; font-family:var(--disp); font-weight:bold; color:var(--blue); font-size:1.1rem; margin-bottom:4px }
+.ask{ background:#fff; border:3px solid var(--purple); border-radius:14px; padding:10px 16px; font-size:1.05rem }
+.ask::before{ content:"💬 Talk About It: "; font-family:var(--disp); font-weight:bold; color:var(--purple) }
+.tag{ align-self:flex-start; font-family:var(--disp); font-size:.95rem; color:var(--ink2);
+      border:2px solid var(--ink2); border-radius:999px; padding:2px 12px; margin-bottom:-4px }
+
+/* ---------- navigation ---------- */
+.nav{
+  position:fixed; left:0; right:0; bottom:0; z-index:10;
+  display:flex; align-items:center; justify-content:center; gap:14px;
+  padding:12px; background:rgba(47,42,38,.92);
+}
+.nav button{
+  font-family:var(--disp); font-size:1.25rem; cursor:pointer;
+  background:var(--gold); color:var(--ink); border:4px solid #000; border-radius:14px;
+  padding:8px 22px; min-width:120px; box-shadow:3px 4px 0 rgba(0,0,0,.4)
+}
+.nav button:disabled{ opacity:.35; cursor:default }
+.nav button:active:not(:disabled){ transform:translate(3px,4px); box-shadow:none }
+.dots{ display:flex; gap:6px; flex-wrap:wrap; justify-content:center; max-width:340px }
+.dots i{ width:11px; height:11px; border-radius:50%; background:rgba(255,255,255,.3); cursor:pointer }
+.dots i.on{ background:var(--gold); transform:scale(1.3) }
+.pnum{ color:#ffe9a8; font-family:var(--disp); font-size:1rem; min-width:64px; text-align:center }
+
+@media (max-width:600px){
+  .words{ padding:20px 20px 24px }
+  .cards{ grid-template-columns:1fr }
+  .nav button{ min-width:84px; padding:8px 12px; font-size:1.05rem }
+  .dots{ display:none }
+  .leaf{ min-height:0 }
+}
+
+/* ---------- print: every page on its own sheet ---------- */
+@media print{
+  *{ -webkit-print-color-adjust:exact !important; print-color-adjust:exact !important }
+  @page{ size:8.5in 11in; margin:.4in }
+  body{ background:#fff; padding:0; display:block }
+  .nav{ display:none }
+  .book{ max-width:none; perspective:none }
+  .leaf{ display:flex !important; flex-direction:column; animation:none !important;
+         box-shadow:none; break-after:page; page-break-after:always; min-height:9.9in }
+  .leaf:last-child{ break-after:auto; page-break-after:auto }
+  .pic{ max-height:none }
+  .reveal{ display:none }
+  .truth{ display:block }
+}
+</style>
+</head>
+<body>
+
+<div class="book" id="book"></div>
+
+<nav class="nav">
+  <button id="prev">◀ Back</button>
+  <div>
+    <div class="dots" id="dots"></div>
+    <div class="pnum" id="pnum"></div>
+  </div>
+  <button id="next">Next ▶</button>
+</nav>
+
+<script>
+(function(){
+  const B = BOOK, book = document.getElementById('book');
+  const esc = s => String(s ?? '');
+  const has = s => s && String(s).trim();
+
+  const pickColor = i => ['#dff1d8','#e4f0ff','#fff0d6','#f4ecff','#ffe6e1','#e8f7f3'][i % 6];
+
+  function picture(p, i){
+    return `
+      <div class="pic" style="background:${pickColor(i)}">
+        <div class="scene">
+          <div class="emo">${esc(p.scene)}</div>
+          ${has(p.art) ? `<div class="art">${esc(p.art)}</div>` : ''}
+        </div>
+        ${has(p.img) ? `<img src="${esc(p.img)}" alt="" onload="this.parentNode.classList.add('has-img')" onerror="this.remove()">` : ''}
+      </div>
+      ${has(p.caption) ? `<div class="caption">${esc(p.caption)}</div>` : ''}`;
+  }
+  const real = p => has(p.real) ? `<div class="real"><b>What REALLY happened: </b>${esc(p.real)}</div>` : '';
+  const pop  = t => has(t) ? `<div class="pop">${t}</div>` : '';
+  const lbl  = (t,c) => `<div class="label" style="background:${c}">${t}</div>`;
+
+  const stopTag = p => p.stop ? `<div class="tag">📍 Stop ${p.stop}: ${esc(B.stops[p.stop-1].name)} ${B.stops[p.stop-1].emoji}</div>` : '';
+
+  const render = {
+    map:(p,i)=>`${picture(p,i)}
+      <div class="words">
+        ${lbl('🗺️ Today\'s Adventure Map','var(--blue)')}
+        ${has(p.text) ? `<p class="txt">${p.text}</p>` : ''}
+        <ul class="route">
+          ${has(B.start) ? `<li class="end">${B.start}</li>` : ''}
+          ${B.stops.map((s,k)=>`<li><span class="n">${s.emoji}<small>${k+1}</small></span>
+            <span><div class="nm">${esc(s.name)}</div><div class="wh">${esc(s.when)}</div></span></li>`).join('')}
+          ${has(B.finish) ? `<li class="end">${B.finish}</li>` : ''}
+        </ul>
+      </div>`,
+
+    stop:(p,i)=>{ const s=B.stops[p.stop-1]; return `${picture(p,i)}
+      <div class="words">
+        <div class="stopbar">
+          ${lbl(`📍 Stop ${p.stop} of ${B.stops.length}`,'var(--red)')}
+          <div class="stamp"><span>STAMP</span><b>${s.emoji}</b><span>✓</span></div>
+        </div>
+        <h2 class="pname">${esc(p.name || s.name)}</h2>
+        ${has(p.jp) ? `<div class="jpline"><span class="k">${p.jp}</span> · say <span class="s">"${p.say}"</span>${has(p.mean)?` · means ${p.mean}`:''}</div>` : ''}
+        <p class="txt">${p.what}</p>
+        ${has(p.wow) ? `<div class="wow">${p.wow}</div>` : ''}
+        ${has(p.bigkid) ? `<div class="bigkid">${p.bigkid}</div>` : ''}
+        ${has(p.ask) ? `<div class="ask">${p.ask}</div>` : ''}
+        ${real(p)}
+      </div>`; },
+    cover:(p,i)=>`
+      <div class="chip"><small>DAY</small><b>${B.day}</b></div>
+      ${picture(p,i)}
+      <div class="words">
+        <div class="kick">Tomo's Totally Reliable Guide to Japan</div>
+        <h1>${esc(B.title)}</h1>
+        <div class="where">${esc(B.date)} &nbsp;•&nbsp; ${esc(B.place)}</div>
+      </div>`,
+
+    story:(p,i)=>`${picture(p,i)}
+      <div class="words">
+        ${stopTag(p)}
+        ${has(p.big)  ? `<p class="big">${p.big}</p>` : ''}
+        ${has(p.text) ? `<p class="txt">${p.text}</p>` : ''}
+        ${pop(p.pop)}${real(p)}
+      </div>`,
+
+    log:(p,i)=>`${picture(p,i)}
+      <div class="words">
+        ${lbl('📓 Tomo\'s Secret Log','var(--blue)')}
+        <div class="logbox">${p.rows.map(r=>`<div class="logrow"><span>${r[0]}</span><span>${r[1]}</span></div>`).join('')}</div>
+      </div>`,
+
+    words:(p,i)=>`${picture(p,i)}
+      <div class="words">
+        ${lbl('🗣️ Say It In Japanese!','var(--green)')}
+        <div class="cards">${p.words.map(w=>`
+          <div class="card">
+            <div class="jp">${w.jp}</div>
+            <div class="kanji">also written: ${w.kanji}</div>
+            <div class="say">"${w.say}"</div>
+            <div class="mean">= ${w.mean}</div>
+            <div class="joke">${w.joke}</div>
+          </div>`).join('')}</div>
+      </div>`,
+
+    why:(p,i)=>`${picture(p,i)}
+      <div class="words">
+        ${stopTag(p)}
+        ${lbl('🏮 Why Do They Do That?','var(--purple)')}
+        <h2 class="h">${esc(p.title)}</h2>
+        <p class="txt">${p.text}</p>
+        ${pop(p.pop)}
+        ${has(p.text2) ? `<p class="txt">${p.text2}</p>` : ''}
+      </div>`,
+
+    try:(p,i)=>`${picture(p,i)}
+      <div class="words">
+        ${lbl('🏠 Try This At Home!','var(--purple)')}
+        <p class="txt">${p.text}</p>
+      </div>`,
+
+    fact:(p,i)=>`${picture(p,i)}
+      <div class="words">
+        ${lbl('⚠️ Tomo\'s Totally True Fact','var(--red)')}
+        <p class="claim">${p.claim}</p>
+        <button class="reveal" data-reveal>Wait… is that true? 👀</button>
+        <div class="truth"><b>The REAL truth:</b> ${p.truth}</div>
+      </div>`,
+
+    gift:(p,i)=>`${picture(p,i)}
+      <div class="words">
+        ${lbl('🎁 In The Souvenir Bag','var(--green)')}
+        <p class="txt"><b>Today I added:</b> ${p.today}</p>
+        ${has(p.note) ? `<p class="txt" style="color:var(--ink2)">${p.note}</p>` : ''}
+        <div class="bag">${p.bag.map((b,k)=>`<span class="${k===p.bag.length-1?'new':''}">${b}</span>`).join('')}</div>
+      </div>`,
+
+    find:(p,i)=>`${picture(p,i)}
+      <div class="words" style="background:var(--ink);color:#ffe9a8">
+        ${lbl('🔍 Find Tomo!','var(--red)')}
+        <p class="big" style="color:#ffe9a8">${p.text}</p>
+      </div>`,
+
+    love:(p,i)=>`<div class="love" style="display:contents">${picture(p,i)}
+      <div class="words">
+        ${lbl('💌 P.S.','var(--red)')}
+        <p class="txt">${p.text}</p>
+        <div class="sig">${esc(B.from)}</div>
+      </div></div>`,
+
+    next:(p,i)=>`${picture(p,i)}
+      <div class="words end">
+        ${lbl('👀 Tomorrow…','var(--blue)')}
+        <p class="big">${p.text}</p>
+        ${pop(p.pop)}
+        <p class="txt" style="text-align:center;color:var(--ink2)">— The End of Day ${B.day} —</p>
+      </div>`
+  };
+
+  B.pages.forEach((p,i)=>{
+    const el = document.createElement('section');
+    el.className = 'leaf t-' + p.type;
+    el.innerHTML = (render[p.type] || render.story)(p,i);
+    book.appendChild(el);
+  });
+
+  book.addEventListener('click', e=>{
+    const b = e.target.closest('[data-reveal]');
+    if(!b) return;
+    b.nextElementSibling.classList.add('on');
+    b.textContent = 'OK fine, I made that up 🙃';
+  });
+
+  /* ---------- page turning ---------- */
+  const leaves = [...book.children], dots = document.getElementById('dots');
+  const prev = document.getElementById('prev'), next = document.getElementById('next'), pnum = document.getElementById('pnum');
+  leaves.forEach((_,i)=>{ const d=document.createElement('i'); d.onclick=()=>go(i); dots.appendChild(d); });
+
+  let cur = Math.min(Math.max((parseInt(location.hash.slice(1))||1)-1,0),leaves.length-1);
+  function go(n){
+    if(n<0 || n>=leaves.length) return;
+    const back = n < cur;
+    leaves.forEach(l=>l.classList.remove('on','back'));
+    leaves[n].classList.add('on'); if(back) leaves[n].classList.add('back');
+    [...dots.children].forEach((d,i)=>d.classList.toggle('on',i===n));
+    cur = n;
+    prev.disabled = n===0;
+    next.textContent = n===leaves.length-1 ? 'The End ⭐' : 'Next ▶';
+    next.disabled = n===leaves.length-1;
+    pnum.textContent = `Page ${n+1} of ${leaves.length}`;
+    history.replaceState(null,'','#'+(n+1));
+    window.scrollTo({top:0,behavior:'smooth'});
+  }
+  prev.onclick = ()=>go(cur-1);
+  next.onclick = ()=>go(cur+1);
+  document.addEventListener('keydown',e=>{
+    if(e.key==='ArrowRight'||e.key===' '){ e.preventDefault(); go(cur+1); }
+    if(e.key==='ArrowLeft'){ go(cur-1); }
+  });
+  let sx=null;
+  book.addEventListener('touchstart',e=>{ sx=e.touches[0].clientX },{passive:true});
+  book.addEventListener('touchend',e=>{
+    if(sx===null) return; const dx=e.changedTouches[0].clientX-sx;
+    if(Math.abs(dx)>50) go(cur+(dx<0?1:-1)); sx=null;
+  });
+  go(cur);
+})();
+</script>
+</body>
+</html>
